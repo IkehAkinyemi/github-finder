@@ -37,6 +37,12 @@ a {
   box-sizing: border-box;
 }
 
+.danger-alert {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #eb0b3b;
+}
+
 #search-input {
   width: 70%;
   padding: 10px;
