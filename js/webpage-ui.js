@@ -35,4 +35,32 @@ class UI {
       </div>
     `
   }
+
+  showErrorAlert() {
+    this.clearErrorMsg();
+    const errorDiv = document.createElement("p");
+    errorDiv.className = "danger-alert";
+    errorDiv.appendChild(document.createTextNode("User Not Found"));
+
+    document.querySelector("#search").insertBefore(
+      errorDiv, 
+      document.querySelector(".search-header-container")
+    );
+
+    setTimeout(() => {
+      this.clearErrorMsg();
+    }, 3000);
+  }
+
+  clearErrorMsg() {
+    const errorDiv = document.querySelector(".danger-alert");
+
+    if (errorDiv) {
+      errorDiv.remove();
+    }
+  }
+
+  clearClientProfile() {
+    this.clientProfile.innerHTML = "";
+  }
 }

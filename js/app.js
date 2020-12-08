@@ -11,6 +11,7 @@ inputField.addEventListener("keyup", (e) => {
       .then(data => {
         if (data.profile.message === "Not Found") {
           //show alert indicating that client is not found
+          webUI.showErrorAlert();
         } else {
           //show client profile details
           console.log(data.profile);
@@ -19,5 +20,6 @@ inputField.addEventListener("keyup", (e) => {
       })
   } else {
     //clear the .github-info-container content
+    webUI.clearClientProfile();
   }
 });
